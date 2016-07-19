@@ -1,5 +1,5 @@
 First goal: throw together a quick little program to help me manage the list.
-functionality ideals: list finished/unfinished challenges. suggest random unfinished challenge.
+functionality ideas: list finished/unfinished challenges. suggest random unfinished challenge.
 
 Initial thoughts: make a quick "task" class having status (bool), notes (String), number (int), task (String). give it toString, toFile. have things get stored in a file, as an excuse to remember how to read/write files. 
 
