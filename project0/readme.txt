@@ -1,3 +1,8 @@
+For 7/21
+Why do I need the third class? Think.
+Implement serializable? Read up
+
+
 First goal: throw together a quick little program to help me manage the list.
 functionality ideas: list finished/unfinished challenges. suggest random unfinished challenge.
 

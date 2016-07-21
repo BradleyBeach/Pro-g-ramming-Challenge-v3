@@ -34,7 +34,6 @@ public class ProjectTest {
 		String real2 = testProj.toString();
 		testProj.addNote("A NOTE HERE");
 		String real3 = testProj.toString();
-		//remember: two spaces in the empty notes, since one is on each side of a |
 		String expected = "Project 1: test project | INCOMPLETE | None";
 		String expected2 = "Project 1: test project | COMPLETE | None";
 		String expected3 = "Project 1: test project | COMPLETE | A NOTE HERE";
