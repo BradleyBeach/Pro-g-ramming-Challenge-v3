@@ -5,7 +5,6 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
@@ -127,13 +126,18 @@ public class Gauntlet {
 	}
 	
 	public void loadFromFile() throws IOException{
-		FileReader programmingChallenge = new FileReader("C:\\Users\\BBeac_000\\Desktop\\Learning\\g_v3.txt");
+		FileReader programmingChallenge = new FileReader("g_v3.txt");
 		BufferedReader textReader = new BufferedReader(programmingChallenge);
 		String line;
+		boolean firstLine = true;
 		while((line = textReader.readLine()) != null){
-			System.out.println(line);
-			listOfProjects.add(new Project(line.substring(5), listOfProjects.size()));
+			if(firstLine){
+				listOfProjects.add(new Project(line.substring(9), listOfProjects.size()));
+				firstLine = !firstLine;
+			} else
+			listOfProjects.add(new Project(line.substring(6), listOfProjects.size()));
 		}
+		textReader.close();
 		
 	}
 }
