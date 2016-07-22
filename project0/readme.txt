@@ -1,41 +1,23 @@
-For 7/21
-Why do I need the third class? Think.
-Implement serializable? Read up
+README - Project Organizer
 
+This is a short little java organizer I wrote in some spare time during the week of 7/18-7/22.
+The purpose is to convert the Pro/g/ramming Challenge, v. 3, into a more workable format.
+I ran the image through an online OCR (http://www.free-ocr.com/) to grab the text.
+I cleaned that text up in g_v3.txt.
 
-First goal: throw together a quick little program to help me manage the list.
-functionality ideas: list finished/unfinished challenges. suggest random unfinished challenge.
+The program uses a command line interface.
+Valid commands are HELP, DISPLAY, UPDATE, LOAD, and EXIT.
+HELP prints those commands. When followed by a command, it details the purpose of the second.
+DISPLAY allows for the display of all/complete/incomplete projects.
+UPDATE lets you toggle the completion status of a project, or add a note.
+LOAD is uses to pull in the data from g_v3.txt. It only needs done once (in fact, doing it twice just fills the list with duplicates).
+EXIT saves and exits. It is the only way to save any changes made.
 
-Initial thoughts: make a quick "task" class having status (bool), notes (String), number (int), task (String). give it toString, toFile. have things get stored in a file, as an excuse to remember how to read/write files. 
+ProjectOrganizer is the main section and is just a glorified menu.
+Gauntlet handles the collection of Projects, and actions to do with them.
+Projects are objects with a name, number, status, and note. They're pretty cut and dry.
 
-use cases:
-1. look at list
-2. set a project to complete
-3. user selects to close program
-4. written to file
-
-same as above but 2 is "writes a note on a project"
-
-1. asks for random project
-2. program returns a project from the "incomplete" list
-
-class diagrams:
-
-Gauntlet:
-projects [Project]
--
-getAll() : [Project]
-getComplete() : [Project]
-getIncomplete() : [Project]
-getProject(name): Project, getProject(number): Project
-writeToFile():
-readFromFile(): (or is this how we init)
-
-Project:
-name, notes: String
-status: bool
-number: int
--
-toString(): String
-addNote():
-changeStatus():
+TODO when I find the time:
+add "pick a random project"
+clean up my random comments
+finish the docs
